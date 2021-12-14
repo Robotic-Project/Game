@@ -278,6 +278,8 @@ class GameController(object):
 if __name__ == "__main__":
     game = GameController()
     game.startGame()
+    pygame.mixer.music.load("sound/pacman.wav")
+    pygame.mixer.music.play(-1)
     while True:
         game.update()
 
