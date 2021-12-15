@@ -16,8 +16,8 @@ import os
 
 class GameController(object):
     def __init__(self):
-        x=620
-        y=340
+        x=-50
+        y=0
         os.environ['SDL_VIDEO_WINDOW_POS'] = "%d,%d" % (x,y)
         pygame.init()
         self.screen = pygame.display.set_mode(SCREENSIZE,pygame.NOFRAME)
@@ -249,6 +249,14 @@ class GameController(object):
         self.textgroup.showText(READYTXT)
 
     def updateScore(self, points):
+        if points == 10 :
+            sound = pygame.mixer.Sound("sound/콩알먹을때.wav")
+            sound.set_volume(0.25)
+            sound.play()
+        elif points == 200 :
+            sound = pygame.mixer.Sound("sound/유령죽을때.wav")
+            sound.set_volume(1)
+            sound.play()
         self.score += points
         self.textgroup.updateScore(self.score)
 
@@ -279,6 +287,7 @@ if __name__ == "__main__":
     game = GameController()
     game.startGame()
     pygame.mixer.music.load("sound/pacman.wav")
+    pygame.mixer.music.set_volume(0.6)
     pygame.mixer.music.play(-1)
     while True:
         game.update()

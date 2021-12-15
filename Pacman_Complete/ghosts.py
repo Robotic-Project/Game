@@ -19,6 +19,9 @@ class Ghost(Entity):
         self.homeNode = node
 
     def reset(self):
+        sound = pygame.mixer.Sound("sound/유령죽을때.wav")
+        sound.set_volume(1)
+        sound.play()
         Entity.reset(self)
         self.points = 200
         self.directionMethod = self.goalDirection
