@@ -1,0 +1,6 @@
+{
+    "app_name": "TETRIS2000",
+    "author": "papalooo",
+    "main_module": "src/main/python/main.py",
+    "version": "3.9.5"
+}

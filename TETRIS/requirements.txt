@@ -1,0 +1,11 @@
+Package       Version
+------------- -------
+altgraph      0.17.2
+fbs           0.8.4
+pip           20.3.4
+pkg-resources 0.0.0
+PyInstaller   3.5
+PyQt5         5.15.6
+PyQt5-Qt5     5.15.2
+PyQt5-sip     12.9.0
+setuptools    44.1.1
